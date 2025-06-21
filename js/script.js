@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cambiar la imagen del logo de la AFA y su tamaño al hacer clic.
     let logoOriginalSrc = logoAfa.getAttribute('src');
-    let logoAlternoSrc = 'https://guiaimpresion.com/wp-content/uploads/2024/03/image.png'; // Una imagen alternativa para el logo
+    let logoAlternoSrc = '/img/logo_antiguo_AFA.webp'; // Una imagen alternativa para el logo
 
     logoAfa.addEventListener('click', () => {
         if (logoAfa.getAttribute('src') === logoOriginalSrc) {
