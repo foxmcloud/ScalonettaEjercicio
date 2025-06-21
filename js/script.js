@@ -57,11 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     tituloPrincipal.addEventListener('mouseover', () => {
         tituloPrincipal.style.transform = 'scale(1.02)';
         tituloPrincipal.style.transition = 'transform 0.2s ease'; // Añadimos transición para suavizar
-        tituloPrincipal.style.color = 'red';
     });
     tituloPrincipal.addEventListener('mouseout', () => {
         tituloPrincipal.style.transform = 'scale(1)';
-        tituloPrincipal.style.color = 'white';
     });
 
 
