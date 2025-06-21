@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Scalonetta Interactiva: Aprendiendo DOM y JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="tituloPrincipal">¡La Scalonetta!</h1>
+        <img id="logoAfa" src="./logo_AFA.png" alt="Logo AFA - Asociación del Fútbol Argentino" width="100">
+    </header>
+
+    <main>
+        <section id="infoGeneral">
+            <h2>Era Scaloni: Un Legado Glorioso</h2>
+            <p id="parrafoInfo">Bajo la dirección de Scaloni, la Selección Argentina conquistó la Copa América 2021, la Finalissima 2022 y la <strong>Copa del Mundo 2022</strong>.</p>
+            <button id="btnResaltarMundial">Resaltar Logro Principal</button>
+            <button id="btnAlternarTema">Alternar Modo Copa</button>
+        </section>
+
+        <section id="seccionJugadores">
+            <h2>Plantilla de Campeones (Ejemplo)</h2>
+            <ul id="lista-jugadores">
+                <li data-id="10" data-posicion="Delantero" class="jugador campeonMundo">
+                    <span>Lionel Messi</span> <button class="btn-ver-detalles">Ver Detalles</button>
+                </li>
+                <li data-id="26" data-posicion="Defensor" class="jugador campeonMundo">
+                    <span>Nahuel Molina</span> <button class="btn-ver-detalles">Ver Detalles</button>
+                </li>
+                <li data-id="23" data-posicion="Arquero" class="jugador campeonMundo">
+                    <span>Emiliano "Dibu" Martínez</span> <button class="btn-ver-detalles">Ver Detalles</button>
+                </li>
+                <li data-id="7" data-posicion="Volante" class="jugador campeonMundo">
+                    <span>Rodrigo De Paul</span> <button class="btn-ver-detalles">Ver Detalles</button>
+                </li>
+            </ul>
+
+            <button id="btnDestacarLio">Destacar a Messi</button>
+            <button id="btnRemoverUltimo">Remover Último Agregado</button>
+        </section>
+
+        <section id="detallesJugador">
+            <h2>Detalles del Héroe Seleccionado</h2>
+            <div id="info-jugador-seleccionado">
+                <p>Haz clic en "Ver Detalles" de un jugador para ver su información aquí.</p>
+            </div>
+        </section>
+
+        <section id="seccionAnadirJugador">
+            <h2>Añadir Nuevo Talento a la Scalonetta</h2>
+            <form id="form-anadir-jugador">
+                <label for="nombreJugador">Nombre:</label>
+                <input type="text" id="nombreJugador" required><br><br>
+                <label for="posicionJugador">Posición:</label>
+                <input type="text" id="posicionJugador" required><br><br>
+                <button type="submit">¡Sumar al Equipo!</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p id="copyright">&copy; 2025 La Scalonetta Interactiva. Ejemplo de DOM y JavaScript.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
