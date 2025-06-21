@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('DOM completamente cargado y listo para JavaScript.');
 
+
+
     // ==============================================================================================
     // --- PARTE 2: SELECCIONAR ELEMENTOS DEL DOM ---
     // Aquí obtenemos referencias a los elementos HTML con los que queremos trabajar.
@@ -36,14 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const formAnadirJugador = document.getElementById('form-anadir-jugador');
     const inputNombreJugador = document.getElementById('nombreJugador');
     const inputPosicionJugador = document.getElementById('posicionJugador');
-    const copyright = document.getElementById('copyright');
+    
 
     // La variable `jugadores` (para `querySelectorAll`) es útil para el mouseover/mouseout si no usamos delegación
     // para esos eventos. Para los botones 'Ver Detalles', nos apoyamos 100% en la delegación.
     // La variable `btnsVerDetalles` no es necesaria si usamos delegación de eventos para los clics.
     // la eliminamos para evitar confusiones.
 
-    copyright.textContent = '© 2025 Scalonetta Mágica. ¡Vamos Argentina!'
+    
     // ==============================================================================================
     // --- PARTE 3: ASIGNAR ESTILO CON JAVASCRIPT ---
     // Demostramos cómo cambiar el CSS de los elementos.
@@ -259,5 +261,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // ==============================================================================================
+    // --- PARTE 8: Ejercicio propuesto ---
+    // ==============================================================================================
+
+    //Se crea boton cambiar estadio
+    const btnCambiarEstadio = document.getElementById("btnCambiarEstadio");
+
+    //Ya completo el proceso de carga se cambia el mensaje del footer.
+    const copyright = document.getElementById("copyright");
+    copyright.textContent = "© 2025 Scalonetta Mágica. ¡Vamos Argentina!";
+
+    //Seleccionamos elementos main y footer
+    const main = document.getElementById("main");
+    const footer = document.getElementById("footer");
+
+    //Se configura evento click de boton btnCambiarEstadio para que cambie atributos de elementos main, footer y titulo principal
+    btnCambiarEstadio.addEventListener('click', () => {
+        
+        //se compara color de fondo de elemento main para generar un comportamiento que vuelva los elementos a su estado original.
+        if (main.style.backgroundColor === "rgb(224, 247, 250)") {
+            main.style.backgroundColor = "#ffffff";
+            footer.style.backgroundColor = "";
+            tituloPrincipal.textContent = "¡La Scalonetta!";
+        } else {
+            main.style.backgroundColor = "#e0f7fa";
+            footer.style.backgroundColor = "#1a5276";
+            tituloPrincipal.textContent = "¡La Scalonetta Campeona del Mundo!";
+        }
+        
+    })
+
+
 
 }); // Fin del evento 'DOMContentLoaded'
